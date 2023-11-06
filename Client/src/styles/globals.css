@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  overflow-x: hidden;
+}
+
+.forms-background {
+  width: 100vw;
+  height: 100vh;
+  background: #1e2f36;
+  display: grid;
+  place-items: center;
+  position: fixed;
+  z-index: 0;
+}
+.forms-background::after,
+.forms-background::before {
+  content: "";
+  position: absolute;
+  background: rgba(243, 180, 22, 0.911);
+  z-index: -2;
+  transform: rotate(45deg);
+  filter: blur(50px) opacity(0.8);
+  border-radius: 50%;
+  box-shadow: -30px -60px 200px rgba(128, 219, 207, 0.692);
+}
+.forms-background::after {
+  width: 150px;
+  height: 400px;
+  top: 350px;
+  left: 38%;
+}
+.forms-background::before {
+  width: 450px;
+  height: 300px;
+  top: 450px;
+  left: 52%;
+}
+.forms-background form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 400px;
+  border: 1px solid rgba(255, 255, 255, 0.212);
+  background: transparent;
+  position: relative;
+  color: white;
+  gap: 24px;
+  padding: 40px;
+}
+.forms-background form::after {
+  content: "";
+  position: absolute;
+  background: rgb(255, 255, 255, 0.4);
+  filter: opacity(0.35) blur(5px);
+  width: 400px;
+  height: 400px;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.forms-background form input[type="text"] {
+  background: rgba(0, 0, 0, 0.22);
+  height: 46px;
+  border-radius: 5px;
+  padding-left: 60px;
+}
+
+.forms-background form input[type="text"]:focus{
+  outline: 2px inset rgba(0, 0, 0, 0.404);
+}
+
+.forms-background form input[type="checkbox"]{
+  width: 24px;
+  height: 24px;
+  accent-color: rgb(255, 255, 255,.4);
+  filter:invert(1) opacity(.4);
+}
+
+.forms-background label{
+  width: 80px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.forms-background form button,.loginBtn{
+  width: 128px;
+  height: 44px;
+  background: #00918B;
+  border-radius: 7px;
+  border-top: 1px solid #00ada8 ;
+  border-right: 1px solid #009691 ;
+  box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.295);
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+select, input{
+  cursor: pointer;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  .error-message{
+    position: absolute;
+    bottom: 60px;
+  }
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: none; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px; 
+}

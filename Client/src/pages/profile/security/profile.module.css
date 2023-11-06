@@ -1,0 +1,31 @@
+.input-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.input-wrapper > input, .input-wrapper select{
+    border: 1px solid black;
+    border-radius: 8px;
+    width: 300px;
+    height: 26px;
+    padding: 0px 6px;
+}
+
+.input-wrapper label{
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.disabled-input{
+    background-color: #E8E9EC;
+    pointer-events: none;
+}
+
+label:has(~ .disabled-input){
+    pointer-events: none;
+}
+
+.input-wrapper ~ button{
+    border: 1px outset gray;
+}

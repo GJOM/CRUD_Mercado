@@ -1,0 +1,36 @@
+.wrapper, .wrapper ~ div{
+    font-size: 22px;
+}
+.wrapper input[type="text"], .wrapper select, .wrapper input[type="number"], 
+.wrapper ~ div select, .wrapper ~ div input{
+    max-height: 32px;
+    border: 1px solid black;
+    border-radius: 6px;
+    padding: 0 10px;
+}
+
+.wrapper > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper > div > input, .wrapper > div > select{
+    width: 300px;
+}
+
+.wrapper select{
+    text-align: center;
+}
+
+.wrapper > div > label{
+    width: 300px;
+}
+.wrapper > div > label::first-letter{
+    text-transform: uppercase;
+}
+
+.wrapper > div{
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
